@@ -40,6 +40,11 @@ func main() {
 	DiamondPattern(numbs)
 	fmt.Println(strings.Repeat("--", 20))
 
+	//
+	fmt.Println(strings.Repeat("--", 20))
+	PatternwithNumber(numbs)
+	fmt.Println(strings.Repeat("--", 20))
+
 }
 
 func PatternWithSpace(n int) {
@@ -215,4 +220,26 @@ func DiamondPattern(n int) {
 	}
 	print("\n")
 
+}
+
+func PatternwithNumber(n int) {
+	for i := 1; i <= n; i++ {
+		// space
+		for j := 1; j <= n-i; j++ {
+			fmt.Print(".")
+		}
+		// increase
+		for k := i; k <= 2*i-1; k++ {
+			fmt.Print(k)
+		}
+		// decrease
+		for j := 2*i - 2; j >= i; j-- {
+			fmt.Print(j)
+		}
+		// space
+		for m := 1; m <= (n - i); m++ {
+			fmt.Print(".")
+		}
+		print("\n")
+	}
 }
