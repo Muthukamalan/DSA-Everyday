@@ -45,6 +45,118 @@ func main() {
 	PatternwithNumber(numbs)
 	fmt.Println(strings.Repeat("--", 20))
 
+	//
+	fmt.Println(strings.Repeat("--", 20))
+	NumPattern1(numbs)
+	fmt.Println(strings.Repeat("--", 20))
+
+	//
+	fmt.Println(strings.Repeat("--", 20))
+	NumPattern2(numbs)
+	fmt.Println(strings.Repeat("--", 20))
+
+	//
+	fmt.Println(strings.Repeat("--", 20))
+	NumberPattern3(numbs)
+	fmt.Println(strings.Repeat("--", 20))
+
+	//
+	fmt.Println(strings.Repeat("--", 20))
+	NumberPattern4(numbs)
+	fmt.Println(strings.Repeat("--", 20))
+
+	// PatternX
+	fmt.Println(strings.Repeat("--", 20))
+	NumberPatternX(numbs)
+	fmt.Println(strings.Repeat("--", 20))
+
+}
+
+func NumberPatternX(n int) {
+	for i := 1; i <= n; i++ {
+		// space
+		for j := 1; j <= i-1; j++ {
+			fmt.Print(".")
+		}
+		fmt.Print(i) // num
+		// space
+		for k := 1; k <= 2*(n-i)-1; k++ {
+			fmt.Print(".")
+		}
+		if i != n {
+			fmt.Print(i)
+		} // num
+		// space
+		for l := 1; l <= i-1; l++ {
+			fmt.Print(".")
+		}
+		fmt.Println()
+	}
+	for i := 2; i <= n; i++ {
+		// space
+		for j := 1; j <= n-i; j++ {
+			fmt.Print(".")
+		}
+		fmt.Print(n - i + 1) // num
+		// space
+		for k := 1; k <= 2*i-3; k++ {
+			fmt.Print(".")
+		}
+		// num
+		if i != 1 {
+			fmt.Print(n - i + 1)
+		}
+		// space
+		for j := 1; j <= n-i; j++ {
+			fmt.Print(".")
+		}
+		fmt.Println()
+	}
+
+}
+
+func NumberPattern4(n int) {
+	for i := 1; i <= n; i++ {
+		for j := 1; j <= i; j++ {
+			fmt.Print(j)
+		}
+		for k := 1; k <= n-i; k++ {
+			fmt.Print(".")
+		}
+		fmt.Println()
+	}
+	for i := 1; i <= n-1; i++ {
+		for j := 1; j <= n-i; j++ {
+			fmt.Print(j)
+		}
+		for k := 1; k <= i; k++ {
+			fmt.Print(".")
+		}
+		fmt.Println()
+	}
+}
+
+func NumberPattern3(n int) {
+	for i := 1; i <= n; i++ {
+		// numbers
+		for j := 1; j <= n-i+1; j++ {
+			fmt.Print(j)
+		}
+		for k := 1; k <= i-1; k++ {
+			fmt.Print(".")
+		}
+		fmt.Println()
+	}
+	for i := 1; i <= n; i++ {
+		for j := 1; j <= i; j++ {
+			fmt.Print(j)
+		}
+		for j := 1; j <= n-i; j++ {
+			fmt.Print(".")
+		}
+		fmt.Println()
+
+	}
 }
 
 func PatternWithSpace(n int) {
@@ -241,5 +353,45 @@ func PatternwithNumber(n int) {
 			fmt.Print(".")
 		}
 		print("\n")
+	}
+}
+
+func NumPattern1(n int) {
+	for i := 1; i <= n; i++ {
+		// star
+		for j := 1; j <= (n - i + 1); j++ {
+			fmt.Print(n - i + 1)
+		}
+		// space
+		for k := 1; k <= i-1; k++ {
+			fmt.Print(".")
+		}
+		fmt.Println()
+	}
+}
+
+func NumPattern2(n int) {
+	var x, y int
+	for i := 1; i <= n; i++ {
+		if i%2 == 0 {
+			x = 1
+			y = 0
+		} else {
+			x = 0
+			y = 1
+		}
+		// number
+		for j := 1; j <= i; j++ {
+			if j%2 == 0 {
+				fmt.Print(x)
+			} else {
+				fmt.Print(y)
+			}
+		}
+		// space
+		for k := 1; k <= n-i; k++ {
+			fmt.Print(".")
+		}
+		fmt.Println()
 	}
 }
