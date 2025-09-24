@@ -1,7 +1,7 @@
 {
         "name": "goPgrms",
         "image": "golang:latest",
-        "postCreateCommand": "go version && go telemetry off",
+        "postCreateCommand": "go version && go telemetry off && ./postCmd.sh",
         "customizations":{
                 "vscode": {
                         "extensions": ["golang.Go"],
