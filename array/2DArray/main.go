@@ -23,4 +23,9 @@ func main() {
 	PrintMatrixColumnWise(matrix)
 	fmt.Println(strings.Repeat("--", 20))
 
+	//
+	fmt.Println(strings.Repeat("--", 20))
+	fmt.Printf("Row Sum of Matrix %v\n", MatrixRowSum(matrix))
+	fmt.Println(strings.Repeat("--", 20))
+
 }
