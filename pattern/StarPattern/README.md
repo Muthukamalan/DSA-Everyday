@@ -11,16 +11,16 @@
 // N times
 for i := 0; i < n; i++ {
 		fmt.Println("")
-	} 
+	}
 
 for i := 1; i <= n; i++ {
 		fmt.Println("")
-	} 
+	}
 
 
 // N-1 times
 for i := 1; i < n; i++ {
 		fmt.Println("")
-	} 
+	}
 
 ```
