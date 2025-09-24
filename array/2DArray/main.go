@@ -28,4 +28,16 @@ func main() {
 	fmt.Printf("Row Sum of Matrix %v\n", MatrixRowSum(matrix))
 	fmt.Println(strings.Repeat("--", 20))
 
+	//
+	fmt.Println(strings.Repeat("--", 20))
+	fmt.Printf("Wave Pattern of Row %v\n", WavePrintRow([][]int{{4, 1, 2}, {7, 4, 4}, {3, 7, 4}}))
+	fmt.Printf("Wave Pattern of Row %v\n", WavePrintRow([][]int{{1, 2}, {3, 4}}))
+	fmt.Println(strings.Repeat("--", 20))
+
+	//
+	fmt.Println(strings.Repeat("--", 20))
+	fmt.Printf("Wave Pattern of Row %v\n", WavePrintColumn([][]int{{4, 1, 2}, {7, 4, 4}, {3, 7, 4}}))
+	fmt.Printf("Wave Pattern of Row %v\n", WavePrintColumn([][]int{{1, 2}, {3, 4}}))
+	fmt.Println(strings.Repeat("--", 20))
+
 }

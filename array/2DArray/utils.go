@@ -43,3 +43,47 @@ func MatrixRowSum(list [][]int) []int {
 
 	return sum_array
 }
+
+func WavePrintRow(matrix [][]int) []int {
+	row_length := len(matrix)
+	array := []int{}
+	for i := 0; i < row_length; i++ {
+
+		col_length := len(matrix[i])
+
+		if i%2 == 0 {
+			for j := 0; j < col_length; j++ {
+				array = append(array, matrix[i][j])
+			}
+		} else {
+			for j := col_length - 1; j >= 0; j-- {
+				array = append(array, matrix[i][j])
+			}
+		}
+	}
+	return array
+
+}
+
+func WavePrintColumn(matrix [][]int) []int {
+	row_length := len(matrix)
+	col_length := len((matrix[0]))
+
+	array := []int{}
+
+	for i := 0; i < col_length; i++ {
+		if i%2 == 0 {
+			for j := 0; j < row_length; j++ {
+				array = append(array, matrix[j][i])
+			}
+		} else {
+			for j := row_length - 1; j >= 0; j-- {
+				array = append(array, matrix[j][i])
+
+			}
+		}
+	}
+
+	return array
+
+}
