@@ -102,4 +102,10 @@ func main() {
 	fmt.Printf("pair count [1, 2,3,2,1]: %d\n", PairCount([]int{1, 2, 3, 2, 1}, 5))
 	fmt.Println(strings.Repeat("--", 20))
 
+	//
+	fmt.Println(strings.Repeat("--", 20))
+	fmt.Printf("max mod [1,2,44,3] %d\n", MaxModInArray([]int{1, 2, 44, 3}))
+	fmt.Printf("max mod [2,6,4] %d\n", MaxModInArray([]int{2, 6, 4}))
+	fmt.Println(strings.Repeat("--", 20))
+
 }
