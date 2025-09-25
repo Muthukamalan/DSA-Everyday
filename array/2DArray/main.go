@@ -88,4 +88,5 @@ func main() {
 	fmt.Printf("is it Identity Matrix %t\n", IsIdentity([][]int{{1, 2, 3, 4}, {5, 6, 7, 8}}))
 	fmt.Println(strings.Repeat("--", 20))
 
+	MatrixTranspose(B)
 }

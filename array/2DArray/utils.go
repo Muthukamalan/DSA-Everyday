@@ -218,6 +218,23 @@ func MatrixT(matrix [][]int) [][]int {
 	return res
 }
 
+func MatrixTranspose(matrix [][]int) [][]int {
+	matrix_row := len(matrix)
+	matrix_col := len(matrix[0])
+
+	res := make([][]int, matrix_col)
+	for i := range res {
+		res[i] = make([]int, matrix_row)
+	}
+
+	for i := 0; i < matrix_col; i++ {
+		for j := 0; j < matrix_row; j++ {
+			res[i][j] = matrix[j][i]
+		}
+	}
+	return res
+}
+
 func IsMatixSimilarSize(A, B [][]int) bool {
 	matrix_a_row_length := len(A)
 	matrix_b_row_length := len(B)
@@ -271,4 +288,17 @@ func isMatrixSiimilar(A, B [][]int) bool {
 		return similar
 	}
 	return false
+}
+
+func MainDiagonalSum(A [][]int) int {
+	sum := 0
+	for i := 0; i < len(A); i++ {
+		// for j := 0; j < len(A[0]); j++ {
+		// 	if i == j {
+		// 		sum += A[i][j]
+		// 	}
+		// }
+		sum += A[i][i]
+	}
+	return sum
 }
