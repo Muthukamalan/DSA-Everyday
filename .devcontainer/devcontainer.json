@@ -11,5 +11,6 @@
                                 }
                         }
                 }
-        }
+        },
+        "remoteUser": "root"
 }
